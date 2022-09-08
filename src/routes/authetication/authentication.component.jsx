@@ -2,16 +2,19 @@
 // import {getRedirectResult } from 'firebase/auth';
 
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
-import { 
-    // auth,
-    signInWithGooglePopup, 
-    createUserDocumentFromAuth,
-    // signInWithGoogleRedirect
- } from "../../utils/firebase/firebase.utils";
+import SignInForm from "../../components/sign-in-form/sign-in-form.component";
+// import { 
+//     // auth,
+//     signInWithGooglePopup, 
+//     createUserDocumentFromAuth,
+//     // signInWithGoogleRedirect
+//  } from "../../utils/firebase/firebase.utils";
+
+import './authentication.styles.scss';
 
 
 
-const SignIn = () => {
+const Authentication = () => {
 
     // //---------Google Redirect----------
     // //useEffect Async Function
@@ -27,28 +30,27 @@ const SignIn = () => {
     // },[]);
 
 
-    //---------Google Popup----------
-    //Getting from database is always async
-    const logGooglePopupUser = async () => {
-        const {user} = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
-    }
+    // //---------Google Popup----------
+    // //Getting from database is always async
+    // const logGooglePopupUser = async () => {
+    //     const {user} = await signInWithGooglePopup();
+    //     await createUserDocumentFromAuth(user);
+    // }
 
     return(
-        <div>
-            <h1>Sign In Page</h1>
-            <button onClick={logGooglePopupUser}>
+        <div className="authentication-container">
+            {/* <button onClick={logGooglePopupUser}>
                 Sign in with Google Popup
-            </button>
+            </button> */}
             {/* 
             ---------Google Redirect----------
             <button onClick={signInWithGoogleRedirect}>
                 Sign in with Google Redirect
             </button> */}
-
+            <SignInForm />
             <SignUpForm />
         </div>
     )
 }
 
-export default SignIn;
+export default Authentication;
