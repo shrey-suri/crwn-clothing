@@ -7,6 +7,7 @@ import {
  } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
+
 import './sign-in-form.styles.scss';
 
 
@@ -19,6 +20,7 @@ const SignInForm = () => {
 
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {email, password} = formFields;
+
 
 
     const resetFormFiels = () => {
@@ -37,8 +39,7 @@ const SignInForm = () => {
 
 
         try {
-            const response =await signInAuthUserWithEmailAndPassword(email,password);
-            
+            const {user} =await signInAuthUserWithEmailAndPassword(email,password);
             resetFormFiels();
         }
         catch (error){
@@ -59,8 +60,7 @@ const SignInForm = () => {
     //---------Google Popup----------
     //Getting from database is always async
     const signInWithGoogle = async () => {
-        const {user} = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     }
 
 
