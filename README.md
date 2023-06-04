@@ -4,7 +4,7 @@ Deployed on [crwn-clothing](https://startling-cobbler-76c696.netlify.app/)
 
 ## Home Page
 
-![image](https://github.com/rayin19/crwn-clothing/assets/41195382/88c8dced-9f21-40d7-a43b-dffc91bb2c88)
+![Home Page](https://github.com/rayin19/crwn-clothing/assets/41195382/88c8dced-9f21-40d7-a43b-dffc91bb2c88)
 
 
 # Getting Started with Create React App
