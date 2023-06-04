@@ -6,6 +6,19 @@ Deployed on [crwn-clothing](https://startling-cobbler-76c696.netlify.app/)
 
 ![Home Page](https://github.com/rayin19/crwn-clothing/assets/41195382/88c8dced-9f21-40d7-a43b-dffc91bb2c88)
 
+## Sign-In Page
+
+![Sign-In Page](https://github.com/rayin19/crwn-clothing/assets/41195382/02d12ca6-8791-494b-9995-26de8eca97ff)
+
+## Shop Page
+
+![Shop Page](https://github.com/rayin19/crwn-clothing/assets/41195382/cd5467e7-01a3-4ef6-9242-7dc6265e4874)
+
+## Cart
+
+![Cart](https://github.com/rayin19/crwn-clothing/assets/41195382/513d47b7-87ed-4e6c-abfd-10fad8c325b5)
+
+
 
 # Getting Started with Create React App
 
