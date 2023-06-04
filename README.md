@@ -1,6 +1,6 @@
 # CRWN-CLOTHING
 
-Deployed on [crwn-clothing](https://startling-cobbler-76c696.netlify.app/)
+Deployed on [Crown Clothing](https://startling-cobbler-76c696.netlify.app/)
 
 ## Home Page
 
