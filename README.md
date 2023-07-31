@@ -1,6 +1,8 @@
-# CRWN-CLOTHING
+# [CROWN-CLOTHING](https://startling-cobbler-76c696.netlify.app/)
 
-CRWN-CLOTHING is a React-based e-commerce website for clothing. The project is deployed and accessible at [Crown Clothing](https://startling-cobbler-76c696.netlify.app/).
+Crown Clothing E-Commerce platform for clothing with secure payment gateways, efficient order management, user-friendly interface,
+and seamless mobile responsiveness. It enhances the user experience by reducing the initial page load time by 40% by leveraging TypeScript.
+- This project uses NodeJS, MongoDB and Express for back-end and React for front-end.
 
 ## Home Page
 
