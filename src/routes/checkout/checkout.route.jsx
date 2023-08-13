@@ -1,13 +1,17 @@
 import './checkout.styles.scss';
 
-import { useContext } from 'react';
-import { CartContext} from '../../contexts/cart.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCartItems, selectPaymentCost } from '../../store/cart/cart.selector';
+import { setIsCartOpen } from '../../store/cart/cart.action';
 
 
 const Checkout = () => {
-    const {cartItems, paymentCost, setIsCartOpen } = useContext(CartContext);
-    setIsCartOpen(false);
+    const dispatch = useDispatch();
+    dispatch(setIsCartOpen(false));
+    const paymentCost = useSelector(selectPaymentCost);
+    const cartItems = useSelector(selectCartItems);
+
     return(
         <div className='checkout-container'>
             <div className='checkout-header'>

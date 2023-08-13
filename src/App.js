@@ -5,8 +5,29 @@ import Navigation from "./routes/navigation/navigation.route";
 import Authentication from "./routes/authetication/authentication.route";
 import Shop from "./routes/shop/shop.route";
 import Checkout from "./routes/checkout/checkout.route";
+import { useDispatch } from "react-redux";
+import { createUserDocumentFromAuth, onAuthStateChangedListerner } from "./utils/firebase/firebase.utils";
+import { setCurrentUser } from "./store/user/user.action";
+import { useEffect } from "react";
 
 function App() {
+
+  const dispatch = useDispatch();
+
+    useEffect(() => {
+        const unsubsribe =  onAuthStateChangedListerner((user) => {
+          if(user){
+              createUserDocumentFromAuth(user);
+          }
+          dispatch(setCurrentUser(user));
+        });
+  
+        return unsubsribe;
+      },[
+        //Not necessary to add - Adding just to remove React Warning
+        dispatch
+      ]);
+
   return (
     <Routes>
       <Route path="/" element={<Navigation />} >
