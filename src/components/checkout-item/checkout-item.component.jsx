@@ -2,6 +2,7 @@ import { CheckoutItemContainer, ImageContainer, SpanContainers, RemoveButton } f
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from '../../store/cart/cart.action';
 import { selectCartItems } from '../../store/cart/cart.selector';
+import CurrencyPrice from '../currency/currency';
 
 const CheckoutItem = ({cartItem}) => {
     const {imageUrl, name, quantity, price} = cartItem;
@@ -24,7 +25,7 @@ const CheckoutItem = ({cartItem}) => {
                 <span className='value'>{quantity}</span>
                 <div className='arrow' onClick={addItemHandler}>&#10095;</div>
             </SpanContainers>
-            <SpanContainers>{price}</SpanContainers>
+            <SpanContainers><CurrencyPrice price={price} /></SpanContainers>
             <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
         </CheckoutItemContainer>
     )

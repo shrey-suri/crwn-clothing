@@ -4,6 +4,7 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartItems, selectPaymentCost } from '../../store/cart/cart.selector';
 import { setIsCartOpen } from '../../store/cart/cart.action';
+import CurrencyPrice from '../../components/currency/currency';
 
 
 const Checkout = () => {
@@ -37,7 +38,7 @@ const Checkout = () => {
                     ))
             }
             <div className='total'>
-                <span>Total Amount: $ {paymentCost}</span>
+                <span>Total Amount: <CurrencyPrice price={paymentCost} /></span>
             </div>
         </div>
     )

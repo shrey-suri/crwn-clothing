@@ -1,3 +1,4 @@
+import CurrencyPrice from "../currency/currency";
 import { CartItemContainer, CartItemImageContainer, ItemDetails, CartItemName } from "./cart-item.styles";
 
 const CartItem = ({cartItem}) => {
@@ -7,7 +8,7 @@ const CartItem = ({cartItem}) => {
             <CartItemImageContainer src={imageUrl} alt={`${name}`} />
             <ItemDetails>
                 <CartItemName>{name}</CartItemName>
-                <span>{quantity} x ${price}</span>
+                <span>{quantity} x <CurrencyPrice price={price} /></span>
             </ItemDetails>
         </CartItemContainer>
     )

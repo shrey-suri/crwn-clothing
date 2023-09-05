@@ -4,32 +4,35 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { store, persistor } from './store/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import { BrowserRouter } from 'react-router-dom';
 // Context API Providers
 // import { UserProvider } from './contexts/user.context';
 // import { CategoriesProvider } from './contexts/categories.context';
 // import { CartProvider } from './contexts/cart.context';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      {/* 
-      Context API Providers
+/* 
+      Old Context API Providers
       <UserProvider>
           <CategoriesProvider>
             <CartProvider>
               <App />
             </CartProvider>
           </CategoriesProvider>
-      </UserProvider> */}
-      {/* Redux uses Context API for provider under the hood */}
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+      </UserProvider> */
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    {/* Redux uses Context API for provider under the hood */}
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
 

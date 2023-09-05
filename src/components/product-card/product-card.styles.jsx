@@ -49,5 +49,5 @@ export const Name = styled.span`
 `
 
 export const Price = styled.span`
-  width: 15%;
+  width: 30%;
 `

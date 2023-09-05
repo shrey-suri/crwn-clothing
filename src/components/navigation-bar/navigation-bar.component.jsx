@@ -9,6 +9,7 @@ import {NavigationContainer, NavLinksContainer,  NavLink, LogoContainer} from ".
 import { selectCurrentUser } from '../../store/user/user.selector';
 import { useSelector } from 'react-redux';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
+import NavDropdown from './nav-currency-dropdown.component';
 
 
 const NavigationBar = () => {
@@ -23,7 +24,7 @@ const NavigationBar = () => {
             </LogoContainer>
             <NavLinksContainer>
                 <NavLink to='/shop'>Shop</NavLink>
-                <CartIcon />
+                
                 {
                     currentUser ? (
                         <NavLink as='span' onClick={signOutUser}>Sign Out</NavLink>
@@ -31,6 +32,10 @@ const NavigationBar = () => {
                         <NavLink to='/auth'>Sign In</NavLink>
                     )
                 }
+
+                <CartIcon />
+                <NavDropdown />
+                
                 
             </NavLinksContainer>
             {isCartOpen && <CartDropdown />}
