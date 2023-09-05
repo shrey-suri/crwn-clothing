@@ -21,34 +21,38 @@ and seamless mobile responsiveness. It enhances the user experience by reducing 
 ![Cart](https://github.com/rayin19/crwn-clothing/assets/41195382/513d47b7-87ed-4e6c-abfd-10fad8c325b5)
 
 ## Getting Started with Create React App
-This project was bootstrapped with Create React App. 
+To run the Crown Clothing e-commerce platform on your local machine, follow these steps:
 
-To run the application locally, follow these steps:
+1. Clone the repository to your local machine using the following command:
 
-1. Clone the project repository to your local machine.
+```
+git clone https://github.com/shrey-suri/crwn-clothing.git
+```
 
-2. Navigate to the project directory in your terminal.
+2. Navigate to the project directory:
 
-3. Run `npm start` in the terminal.
+```
+cd crwn-clothing
+```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+3. Install the required dependencies:
 
-The page will reload if you make any edits, and you will also see any lint errors in the console.
+```
+npm install
+```
 
-## Available Scripts
-In the project directory, you can run the following scripts:
+4. Start the development server:
 
-- `npm start`: Runs the app in development mode.
-- `npm test`: Launches the test runner in interactive watch mode.
-- `npm run build`: Builds the app for production.
-- `npm run eject`: Ejects the app and provides full control over configuration and dependencies.
+```
+npm start
+```
 
-For more details on using Create React App, refer to the [Create React App documentation](https://create-react-app.dev/docs/getting-started/).
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access the app.
 
-## Learn More
-To learn more about React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-## Deployment
-To deploy your own version of the app, follow the deployment section in the [Create React App documentation](https://create-react-app.dev/docs/deployment/).
+We welcome contributions to enhance the functionality and user experience of the Crown Clothing Application. If you find any bugs or want to add new features, please feel free to open an issue or submit a pull request. We appreciate your help in making this project better!
 
-Feel free to explore the Crown Clothing project and make any modifications or enhancements according to your needs.
+## Acknowledgments
+
+- This project utilizes the [APILayer](https://apilayer.com/) for currency conversion data. We are grateful for their services.
